@@ -1,23 +1,19 @@
 .container
 {
     border:1px solid red;
-    width:648px;
-    height: 640px;
+    width:672px;
+    height: 672px;
     display: flex;
-    
     flex-wrap: wrap;
     
-    overflow: hidden;
 }
 
 .boxing
 {
     border:1px solid green;
     
-    min-width: 160px;
-    height: 160px;
-    display: flex;
-   
+    width: 40px;
+    height: 40px;  
     
     
     
@@ -26,6 +22,7 @@
    
     
 }
+
 
 :root
 {
