@@ -22,6 +22,7 @@
 
 
 
+  
     <script>
 
 
@@ -30,7 +31,7 @@
 
 
 
-var div = document.createElement("div");
+let div = document.createElement("div");
 
 
 
@@ -43,12 +44,10 @@ let container = document.getElementById('container');
         let divaluehere = document.createElement('div');
         divaluehere.setAttribute('class', 'boxing');
         container.appendChild(divaluehere);
-        
-      
-
     };
 
-
+getColors();
+function getColors(){
 const counters = document.getElementsByClassName("boxing");
 
         for (const boxing of counters)
@@ -65,10 +64,10 @@ const counters = document.getElementsByClassName("boxing");
         let c = Math.floor(Math.random() * 256);
         
         boxing.style.backgroundColor ='rgb(' + a + ',' + b + ',' + c + ')';
-            console.log(boxing.style.backgroundColor);
+            // console.log(boxing.style.backgroundColor);
 
 
-    })
+    })}
 
 
      const onclicking = document.getElementById("button");
@@ -85,33 +84,60 @@ const counters = document.getElementsByClassName("boxing");
 
 
         
+       
         let newanswer = prompt("Enter a number of squares per side for the new grid (Maximum 100)");
 
         
         //console.log(newanswer);
 
         // counters.style.backgroundColor = "black";
+            if (newanswer < 0 || newanswer > 100)
+            {
 
+                do
+                {
+                    alert("Please enter a valid number (0 to 100).")
+                    newanswer = prompt("Enter a number of squares per side for the new grid (Maximum 100)");
+                }while(newanswer < 0 || newanswer > 100)
+                
+            }
         for (let z = 0; z < (newanswer * newanswer); z++)
         {
             let newgrid = document.createElement("div");
             newgrid.setAttribute("class", "boxing");
+            newgrid.style.width = 640 / newanswer + 'px';
+            newgrid.style.height = 640 / newanswer + 'px';
             container.appendChild(newgrid);
-            
+     }
 
-           /* for (const boxing of counters)
+       //getColors();
 
-        boxing.addEventListener("mouseover", function onClick() {
+    //    const counters = document.getElementsByClassName("boxing");
+
+    //     for (const boxing of counters)
+     
+        // boxing.addEventListener("mouseover", function onClick() {
 
         
-        boxing.classList.add("black");
-        
+        // boxing.classList.add("black");
+        console.log("hello");
+        const afterclean = document.getElementsByClassName("boxing");
+        for (const boxing of afterclean)
+        {
+            boxing.addEventListener("mouseover", function onClick() {
+            //boxing.classList.add("black");
 
+        let a = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        let c = Math.floor(Math.random() * 256);
         
-        
-    })
-       */ }
-    })
+        boxing.style.backgroundColor ='rgb(' + a + ',' + b + ',' + c + ')';
+
+        }
+     )}
+       
+
+     })
 
 /* random colors for background?
             let a = Math.floor(Math.random() * 256);
@@ -120,7 +146,6 @@ const counters = document.getElementsByClassName("boxing");
         document.body.style.backgroundColor='rgb(' + a + ',' + b + ',' + c + ')';
 
 */
-
 
     </script>
 </body>

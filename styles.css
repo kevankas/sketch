@@ -1,8 +1,8 @@
 .container
 {
-    border:1px solid red;
-    width:672px;
-    height: 672px;
+    border: 1px solid white;
+    width: 640px;
+    height: 640px;
     display: flex;
     flex-wrap: wrap;
     margin: 100px auto;
@@ -12,7 +12,7 @@
 
 .boxing
 {
-    border:1px solid green;
+    /* border:1px solid green; */
     
     width: 40px;
     height: 40px;  
@@ -42,4 +42,5 @@
 {
     margin: 0;
     padding: 0;
+    background: rgb(25,33,55);
 }
