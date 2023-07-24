@@ -32,7 +32,34 @@
     height: 10vh;
     align-items: flex-end;
 }
+.kevan
+{
+    color: #efefef;
+    font-family: Helvetica, sans-serif;
+    display:flex;
+    justify-content: center;
+}
+a
+{text-decoration: none;
+    color: #efefef;
+    font-family: Helvetica, sans-serif;}
 
+img{
+
+max-width: 12px;
+max-height: 12px;
+    ;}
+
+.footer
+{
+    color: white;
+    display:flex;
+    justify-content: center;
+    font-weight:900;
+    font-size: 48px;
+    font-family: Helvetica, sans-serif;
+    color: #efefef;
+}
 
  .black
 {background: black;} 
