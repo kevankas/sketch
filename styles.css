@@ -5,6 +5,8 @@
     height: 672px;
     display: flex;
     flex-wrap: wrap;
+    margin: 100px auto;
+
     
 }
 
@@ -15,13 +17,25 @@
     width: 40px;
     height: 40px;  
     
-    
-    
-    
-    
-   
+}
+.button
+{
+    width: 150px;
+    height: 75px;
     
 }
+
+.centering
+{
+    display:flex;
+    justify-content: center;
+    height: 10vh;
+    align-items: flex-end;
+}
+
+
+/* .black
+{background: black;} */
 
 
 :root
