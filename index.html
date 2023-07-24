@@ -65,19 +65,29 @@ const counters = document.getElementsByClassName("boxing");
         let c = Math.floor(Math.random() * 256);
         
         boxing.style.backgroundColor ='rgb(' + a + ',' + b + ',' + c + ')';
+            console.log(boxing.style.backgroundColor);
 
-        
-        
+
     })
+
 
      const onclicking = document.getElementById("button");
      button.addEventListener("click", function clicking()
     {
-        // const element = document.getElementsByClassName("boxing");
-        // element.remove();
+
+
+        let deletion = document.getElementsByClassName("boxing");
+            
+            for (let counting = 0; counting < deletion.length ; counting++)
+            {
+            deletion[counting].style.display = "none";
+            }
+
 
         
         let newanswer = prompt("Enter a number of squares per side for the new grid (Maximum 100)");
+
+        
         //console.log(newanswer);
 
         // counters.style.backgroundColor = "black";
